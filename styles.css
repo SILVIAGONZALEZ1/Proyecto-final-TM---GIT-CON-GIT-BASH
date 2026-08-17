@@ -1,0 +1,136 @@
+/* Card Container - Ahora horizontal */
+.jg-card {
+  max-width: 800px; /* Un poco más ancho para la vista horizontal */
+  margin: 40px auto; /* Centrado en la página */
+  padding: 40px; /* Más espacio interno */
+  background-color: #ffffff;
+  border-radius: 20px; /* Bordes más redondeados y modernos */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); /* Sombra más suave y profunda */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #334155;
+  box-sizing: border-box;
+  
+  /* Flexbox para alineación horizontal */
+  display: flex;
+  flex-direction: row; /* Fuerza la disposición en fila */
+  align-items: center; /* Centra verticalmente la foto con el texto */
+  gap: 40px; /* Espacio entre la foto y el contenido */
+}
+
+/* Modificador opcional para asegurar la vista horizontal */
+.jg-card--horizontal {
+  /* No se necesita código extra aquí si usas flex-direction: row arriba,
+     pero es bueno para la semántica */
+}
+
+/* --- Columna izquierda: Foto --- */
+.jg-photo-container {
+  flex-shrink: 0; /* Evita que la foto se encoja si el contenido es grande */
+  display: flex;
+  justify-content: center;
+}
+
+.jg-photo {
+  width: 220px; /* Foto más grande para el formato horizontal */
+  height: 220px;
+  border-radius: 50%; /* Foto perfectamente circular */
+  object-fit: cover; /* Recorta la imagen correctamente */
+  border: 5px solid #eff6ff; /* Borde más sutil */
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.1);
+}
+
+/* --- Columna derecha: Todo el contenido de texto --- */
+.jg-content {
+  flex-grow: 1; /* Ocupa el espacio restante */
+  display: flex;
+  flex-direction: column; /* Apila el texto verticalmente */
+  gap: 20px; /* Espacio entre secciones de texto */
+  text-align: left; /* Alinea todo el texto a la izquierda */
+}
+
+/* Encabezado (Nombre y Profesión) */
+.jg-header-content {
+  margin-bottom: 10px;
+}
+
+.jg-name {
+  margin: 0 0 5px 0;
+  font-size: 2.2rem; /* Nombre más grande y destacado */
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.jg-profession {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2563eb; /* Azul elegante y profesional */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Títulos de sección (Sobre mí y Habilidades) */
+.jg-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.jg-section-title {
+  font-size: 0.8rem; /* Título pequeño y sutil */
+  font-weight: 600;
+  color: #94a3b8; /* Gris suave */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 8px 0;
+}
+
+/* Sobre mí */
+.jg-about {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0;
+}
+
+/* Habilidades */
+.jg-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que las habilidades salten de línea */
+  gap: 10px; /* Espacio entre los badges */
+}
+
+.jg-skill-badge {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+}
+
+/* --- Media Queries para Responsividad (Opcional pero recomendado) --- */
+/* Si la pantalla es muy estrecha, volvemos al diseño vertical */
+@media (max-width: 650px) {
+  .jg-card {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+    text-align: center; /* Centramos todo el texto de nuevo */
+  }
+
+  .jg-content {
+    text-align: center;
+  }
+
+  .jg-section {
+    align-items: center; /* Centra los títulos y la lista de skills */
+  }
+
+  .jg-skills-list {
+    justify-content: center; /* Centra las habilidades horizontalmente */
+  }
+}
