@@ -1,48 +1,3 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Card de profesora</title>
-    <link rel="stylesheet" href="estilos.css" />
-  </head>
-  <body>
-    <main class="page">
-      <section class="teacher-card">
-        <div class="photo">
-          <img
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&auto=format&fit=crop"
-            alt="Foto de la profesora"
-          />
-        </div>
-        <div class="info">
-          <h1 class="name">Silvia González</h1>
-          <p class="role">Profesora de Matemáticas</p>
-          <p class="summary">
-            Profesora con experiencia en educación secundaria, metodologías
-            activas y adaptación curricular. Me apasiona transmitir pensamiento
-            crítico y resolver problemas con el alumnado.
-          </p>
-
-          <h2>Habilidades</h2>
-          <ul class="skills">
-            <li>Planificación curricular y evaluación formativa</li>
-            <li>Aprendizaje basado en proyectos (ABP)</li>
-            <li>Atención a la diversidad e inclusión</li>
-            <li>Integración de TIC en el aula</li>
-          </ul>
-
-          <div class="controls">
-            <a class="btn" href="#">Contactar</a>
-            <a class="btn ghost" href="#">Descargar CV</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script src="scripts.js"></script>
-  </body>
-</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,110 +7,136 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Bienvenidos al proyecto de Git Bash</h1>
-
-    <p></p>
-    
-    <h2>Integrantes</h2>
-
-<div class="jg-card jg-card--horizontal">
-  
-  <!-- Columna izquierda: Foto -->
-  <div class="jg-photo-container">
-    <img src="./img/jimena-foto.jpg" alt="Foto de Jimena García" class="jg-photo">
-  </div>
-
-  <!-- Columna derecha: Todo el contenido de texto -->
-  <div class="jg-content">
-    
-    <!-- Encabezado (Nombre y Profesión) -->
-    <div class="jg-header-content">
-      <h2 class="jg-name">Jimena García</h2>
-      <p class="jg-profession">Data Analyst Jr.</p>
-    </div>
-
-    <!-- Sección Sobre mí -->
-    <div class="jg-section">
-      <h3 class="jg-section-title">Sobre mí</h3>
-      <p class="jg-about">
-        Estudiante avanzada en Ciencias Básicas con orientación en Biología y apasionada por el análisis de datos. Enfocada en la resolución de problemas mediante modelado estadístico, análisis exploratorio y machine learning.
+   <section>
+      <p>Curso de Git y Git Bash</p>
+      <h1>Bienvenidos al proyecto de Git Bash</h1>
+      <p>
+        En esta página mostramos una foto del equipo y compartimos las habilidades
+        de programación que conocemos, mientras practicamos ramas, commits y
+        colaboración en Git.
       </p>
-    </div>
+    </section>
+   <main>   
+      <h2>Integrantes</h2>
 
-    <!-- Sección Habilidades -->
-    <div class="jg-section">
-      <h3 class="jg-section-title">Habilidades</h3>
-      <ul class="jg-skills-list">
-        <li class="jg-skill-badge">Python</li>
-        <li class="jg-skill-badge">SQL</li>
-        <li class="jg-skill-badge">Git & Git Bash</li>
-        <li class="jg-skill-badge">Power BI</li>
-        <li class="jg-skill-badge">Modelado Estadístico</li>
-        <li class="jg-skill-badge">R</li>
-        <li class="jg-skill-badge">Metodologías Ágiles</li>
-      </ul>
-    </div>
-  </div>
-</div>
-    
-    <main>
-        <section>
-            <p>Curso de Git y Git Bash</p>
-            <h1>Bienvenidos al proyecto de Git Bash</h1>
-            <p>
-                En esta página mostramos una foto del equipo y compartimos las habilidades
-                de programación que conocemos, mientras practicamos ramas, commits y
-                colaboración en Git.
+      <!-- tarjeta profesora -->
+      <section class="teacher-card">
+          <div class="photo">
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&auto=format&fit=crop"
+              alt="Foto de la profesora"
+            />
+          </div>
+          <div class="info">
+            <h1 class="name">Silvia González</h1>
+            <p class="role">Profesora de Matemáticas</p>
+            <p class="summary">
+              Profesora con experiencia en educación secundaria, metodologías
+              activas y adaptación curricular. Me apasiona transmitir pensamiento
+              crítico y resolver problemas con el alumnado.
             </p>
-        </section>
+            <h2>Habilidades</h2>
+            <ul class="skills">
+              <li>Planificación curricular y evaluación formativa</li>
+              <li>Aprendizaje basado en proyectos (ABP)</li>
+              <li>Atención a la diversidad e inclusión</li>
+              <li>Integración de TIC en el aula</li>
+            </ul>
 
-       
-            <h2 id="integrantes">Integrantes</h2>
+            <div class="controls">
+              <a class="btn" href="#">Contactar</a>
+              <a class="btn ghost" href="#">Descargar CV</a>
+            </div>
+          </div>
+      </section>    
+    
+    
+      <!-- tarjeta jimena -->      
+      <div class="jg-card jg-card--horizontal">
+      
+      <!-- Columna izquierda: Foto -->
+      <div class="jg-photo-container">
+        <img src="./img/jimena-foto.jpg" alt="Foto de Jimena García" class="jg-photo">
+      </div>
 
-            <article class="curriculum-card-lucas">
-                <div class="foto-lucas">
-                    <img
-                        src="img/ChatGPT%20Image%2013%20ago%202026,%2012_46_49%20p.m..png"
-                        alt="Foto de perfil de Lucas"
-                    >
-                </div>
+      <!-- Columna derecha: Todo el contenido de texto -->
+      <div class="jg-content">
+        
+        <!-- Encabezado (Nombre y Profesión) -->
+        <div class="jg-header-content">
+          <h2 class="jg-name">Jimena García</h2>
+          <p class="jg-profession">Data Analyst Jr.</p>
+        </div>
 
-                <div class="contenido-lucas">
-                    <p class="etiqueta-lucas">Perfil profesional</p>
-                    <h3>Lucas David Adrover</h3>
-                    <p class="descripcion-lucas">
-                        Soy estudiante de programación de tercer año. Me gusta aprender sobre
-                        tecnología y desarrollo de software. El área que más me interesa es el
-                        backend, porque me permite trabajar con la lógica, los datos y el
-                        funcionamiento interno de las aplicaciones.
-                    </p>
+        <!-- Sección Sobre mí -->
+        <div class="jg-section">
+          <h3 class="jg-section-title">Sobre mí</h3>
+          <p class="jg-about">
+            Estudiante avanzada en Ciencias Básicas con orientación en Biología y apasionada por el análisis de datos. Enfocada en la resolución de problemas mediante modelado estadístico, análisis exploratorio y machine learning.
+          </p>
+        </div>
 
-                    <div class="tecnologias-lucas">
-                        <div>
-                            <h4>Lenguajes</h4>
-                            <ul class="lista-lucas">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>TypeScript</li>
-                                <li>Java</li>
-                                <li>SQL</li>
-                            </ul>
-                        </div>
+        <!-- Sección Habilidades -->
+        <div class="jg-section">
+            <h3 class="jg-section-title">Habilidades</h3>
+            <ul class="jg-skills-list">
+              <li class="jg-skill-badge">Python</li>
+              <li class="jg-skill-badge">SQL</li>
+              <li class="jg-skill-badge">Git & Git Bash</li>
+              <li class="jg-skill-badge">Power BI</li>
+              <li class="jg-skill-badge">Modelado Estadístico</li>
+              <li class="jg-skill-badge">R</li>
+              <li class="jg-skill-badge">Metodologías Ágiles</li>
+            </ul>
+        </div>
+      </div>
+      </div>
+    
+    
+      <!-- tarjeta lucas -->   
+      <article class="curriculum-card-lucas">
+        <div class="foto-lucas">
+          <img src="img/ChatGPT%20Image%2013%20ago%202026,%2012_46_49%20p.m..png"alt="Foto de perfil de Lucas">
+        </div>
+        <div class="contenido-lucas">
+          <p class="etiqueta-lucas">Perfil profesional</p>
+          <h3>Lucas David Adrover</h3>
+          <p class="descripcion-lucas">
+            Soy estudiante de programación de tercer año. Me gusta aprender sobre
+            tecnología y desarrollo de software. El área que más me interesa es el
+            backend, porque me permite trabajar con la lógica, los datos y el
+            funcionamiento interno de las aplicaciones.
+        </p>
+        <div class="tecnologias-lucas">
+            <div>
+                <h4>Lenguajes</h4>
+                <ul class="lista-lucas">
+                  <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>Java</li>
+                  <li>SQL</li>
+                  </ul>
+            </div>
+            <div>
+                <h4>Herramientas</h4>
+                <ul class="lista-lucas">
+                  <li>Spring Boot</li>
+                  <li>React</li>
+                  <li>Git</li>
+                <li>Git Bash</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </article>       
 
-                        <div>
-                            <h4>Herramientas</h4>
-                            <ul class="lista-lucas">
-                                <li>Spring Boot</li>
-                                <li>React</li>
-                                <li>Git</li>
-                                <li>Git Bash</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </article>
+    </main> 
+  
 
-    </main>
+
+
+
 </body>
 </html>
