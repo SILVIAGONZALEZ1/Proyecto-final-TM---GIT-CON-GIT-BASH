@@ -15,6 +15,11 @@ body {
   color: #111;
 }
 
+main {
+  gap: 0;
+  padding: 0 16px 40px;
+}
+
 .page {
   min-height: 100vh;
   display: flex;
@@ -239,7 +244,6 @@ body {
     gap: 30px;
     text-align: center; /* Centramos todo el texto de nuevo */
   }
-
   .jg-content {
     text-align: center;
   }
@@ -252,6 +256,116 @@ body {
     justify-content: center; /* Centra las habilidades horizontalmente */
   }
 }
+
+/* Tarjeta de perfil de Heber */
+.heber-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 32px;
+  overflow: hidden;
+  border: 1px solid #dbe3f1;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 15px 35px rgba(53, 67, 101, 0.1);
+}
+
+.heber-card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: #4f63c6;
+  content: "";
+}
+
+.heber-avatar {
+  flex: 0 0 180px;
+  width: 180px;
+  height: 180px;
+  border: 5px solid #eff4fb;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.heber-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.heber-label {
+  margin-bottom: 8px;
+  color: #4f63c6;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heber-content h2 {
+  margin-bottom: 6px;
+  color: #172033;
+  font-size: 1.8rem;
+}
+
+.heber-role {
+  margin-bottom: 16px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.heber-description {
+  max-width: 62ch;
+  margin-bottom: 22px;
+  color: #546179;
+  line-height: 1.6;
+}
+
+.heber-title {
+  margin-bottom: 10px;
+  color: #172033;
+  font-size: 1rem;
+}
+
+.heber-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.heber-skills li {
+  padding: 8px 12px;
+  border: 1px solid #dbe3f1;
+  border-radius: 8px;
+  background: #f6f8fc;
+  color: #25314d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .heber-card {
+    flex-direction: column;
+    padding: 28px 22px;
+    text-align: center;
+  }
+
+  .heber-avatar {
+    flex-basis: auto;
+    width: 140px;
+    height: 140px;
+    border-radius: 999px;
+  }
+
+  .heber-skills {
+    justify-content: center;
+  }
+}
+
 .curriculum-card-lucas {
     display: grid;
     grid-template-columns: 280px 1fr;
