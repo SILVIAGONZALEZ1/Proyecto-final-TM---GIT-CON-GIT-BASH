@@ -118,7 +118,7 @@ body {
 
 /* Card Container - Ahora horizontal */
 .jg-card {
-  max-width: 800px; /* Un poco más ancho para la vista horizontal */
+  max-width: 900px; /* Igual ancho que la tarjeta de la profesora */
   margin: 40px auto; /* Centrado en la página */
   padding: 40px; /* Más espacio interno */
   background-color: #ffffff;
@@ -258,7 +258,7 @@ body {
     gap: 28px;
     align-items: stretch;
     overflow: hidden;
-    max-width: 980px;
+    max-width: 900px;
     margin: 24px 0;
     border: 1px solid #dbe3f1;
     border-radius: 8px;
