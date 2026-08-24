@@ -1,378 +1,256 @@
-/* Tarjeta de presentación profesora */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family:
-    Inter,
-    system-ui,
-    -apple-system,
-    "Helvetica Neue",
-    Arial;
 }
+
 body {
   background: #f3f4f6;
-  color: #111;
+  color: #172033;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+.site-header {
+  display: grid;
+  gap: 12px;
+  padding: 40px 24px;
+  text-align: center;
+  background: #ffffff;
+  border-bottom: 1px solid #dbe3f1;
+}
+
+.site-header h1 {
+  font-size: clamp(30px, 5vw, 48px);
+}
+
+.site-header p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #4b5563;
+  line-height: 1.6;
 }
 
 main {
-  gap: 0;
-  padding: 0 16px 40px;
-}
-
-.page {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-}
-.teacher-card {
-  display: flex;
-  gap: 28px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
-  max-width: 900px;
-  width: 100%;
-  padding: 28px;
-}
-.photo {
-  flex: 0 0 180px;
-}
-.photo img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.info {
-  flex: 1;
-}
-.name {
-  font-size: 1.5rem;
-  margin-bottom: 6px;
-}
-.role {
-  color: #6b7280;
-  margin-bottom: 12px;
-}
-.summary {
-  margin-bottom: 14px;
-  line-height: 1.4;
-  color: #374151;
-}
-
-.skills {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px 12px;
-  margin-bottom: 18px;
-}
-.skills li {
-  background: #eef2ff;
-  padding: 8px 10px;
-  border-radius: 8px;
-  color: #3730a3;
-  font-size: 0.95rem;
-}
-
-.controls {
-  display: flex;
-  gap: 10px;
-}
-.btn {
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 8px;
-  background: #2563eb;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-.btn.ghost {
-  background: transparent;
-  color: #111;
-  border: 1px solid #e5e7eb;
-}
-
-@media (max-width: 700px) {
-  .teacher-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .photo {
-    flex: 0 0 auto;
-  }
-  .photo img {
-    width: 140px;
-    height: 140px;
-    border-radius: 999px;
-  }
-  .skills {
-    grid-template-columns: 1fr;
-  }
-  .controls {
-    justify-content: center;
-  }
-}
-
-
-/* Card Container - Ahora horizontal */
-.jg-card {
-  max-width: 900px; /* Igual ancho que la tarjeta de la profesora */
-  margin: 40px auto; /* Centrado en la página */
-  padding: 40px; /* Más espacio interno */
-  background-color: #ffffff;
-  border-radius: 20px; /* Bordes más redondeados y modernos */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); /* Sombra más suave y profunda */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #334155;
-  box-sizing: border-box;
-  
-  /* Flexbox para alineación horizontal */
-  display: flex;
-  flex-direction: row; /* Fuerza la disposición en fila */
-  align-items: center; /* Centra verticalmente la foto con el texto */
-  gap: 40px; /* Espacio entre la foto y el contenido */
-}
-
-/* Modificador opcional para asegurar la vista horizontal */
-.jg-card--horizontal {
-  /* No se necesita código extra aquí si usas flex-direction: row arriba,
-     pero es bueno para la semántica */
-}
-
-/* --- Columna izquierda: Foto --- */
-.jg-photo-container {
-  flex-shrink: 0; /* Evita que la foto se encoja si el contenido es grande */
-  display: flex;
-  justify-content: center;
-}
-
-.jg-photo {
-  width: 220px; /* Foto más grande para el formato horizontal */
-  height: 220px;
-  border-radius: 50%; /* Foto perfectamente circular */
-  object-fit: cover; /* Recorta la imagen correctamente */
-  border: 5px solid #eff6ff; /* Borde más sutil */
-  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.1);
-}
-
-/* --- Columna derecha: Todo el contenido de texto --- */
-.jg-content {
-  flex-grow: 1; /* Ocupa el espacio restante */
-  display: flex;
-  flex-direction: column; /* Apila el texto verticalmente */
-  gap: 20px; /* Espacio entre secciones de texto */
-  text-align: left; /* Alinea todo el texto a la izquierda */
-}
-
-/* Encabezado (Nombre y Profesión) */
-.jg-header-content {
-  margin-bottom: 10px;
-}
-
-.jg-name {
-  margin: 0 0 5px 0;
-  font-size: 2.2rem; /* Nombre más grande y destacado */
-  font-weight: 700;
-  color: #1e293b;
-}
-
-.jg-profession {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #2563eb; /* Azul elegante y profesional */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Títulos de sección (Sobre mí y Habilidades) */
-.jg-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 16px 48px;
 }
 
-.jg-section-title {
-  font-size: 0.8rem; /* Título pequeño y sutil */
-  font-weight: 600;
-  color: #94a3b8; /* Gris suave */
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin: 0 0 8px 0;
+main > h2 {
+  font-size: 30px;
 }
 
-/* Sobre mí */
-.jg-about {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #334155;
-  margin: 0;
-}
-
-/* Habilidades */
-.jg-skills-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.skill-filters {
   display: flex;
-  flex-wrap: wrap; /* Permite que las habilidades salten de línea */
-  gap: 10px; /* Espacio entre los badges */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 900px;
 }
 
-.jg-skill-badge {
-  background-color: #f1f5f9;
-  color: #1e293b;
-  font-size: 0.8rem;
-  font-weight: 500;
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid #cbd5e1;
+.filter-btn,
+.accordion-btn,
+.btn {
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
 }
 
-/* --- Media Queries para Responsividad (Opcional pero recomendado) --- */
-/* Si la pantalla es muy estrecha, volvemos al diseño vertical */
-@media (max-width: 650px) {
-  .jg-card {
-    flex-direction: column;
-    padding: 30px;
-    gap: 30px;
-    text-align: center; /* Centramos todo el texto de nuevo */
-  }
-  .jg-content {
-    text-align: center;
-  }
-
-  .jg-section {
-    align-items: center; /* Centra los títulos y la lista de skills */
-  }
-
-  .jg-skills-list {
-    justify-content: center; /* Centra las habilidades horizontalmente */
-  }
+.filter-btn,
+.accordion-btn {
+  border: 1px solid #dbe3f1;
+  background: #ffffff;
+  color: #25314d;
 }
 
-/* Ajustes propios del perfil de Heber */
-.heber-label {
-  margin-bottom: 8px;
+.filter-btn {
+  padding: 9px 12px;
+}
+
+.filter-btn.active {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 900px;
+  perspective: 1200px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.profile-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-inner {
+  display: grid;
+  width: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.profile-card.is-contacting .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  grid-area: 1 / 1;
+  min-height: 360px;
+  backface-visibility: hidden;
+}
+
+.profile-front,
+.card-back {
+  border: 1px solid #dbe3f1;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(53, 67, 101, 0.12);
+  overflow: hidden;
+}
+
+.profile-front {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+}
+
+.profile-photo {
+  min-height: 360px;
+  background: #d8e2f2;
+}
+
+.profile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px;
+}
+
+.profile-label {
   color: #4f63c6;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-@media (max-width: 700px) {
-  .heber-card {
-    border-left: 4px solid #4f63c6;
-  }
+.profile-info h3 {
+  font-size: 30px;
+  line-height: 1.15;
 }
 
-.curriculum-card-lucas {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 28px;
-    align-items: stretch;
-    overflow: hidden;
-    max-width: 900px;
-    margin: 24px 0;
-    border: 1px solid #dbe3f1;
-    border-radius: 8px;
-    background: #ffffff;
-    box-shadow: 0 20px 48px rgba(53, 67, 101, 0.16);
+.profile-role {
+  color: #2563eb;
+  font-weight: 700;
 }
 
-.foto-lucas {
-    min-height: 360px;
-    background: #d8e2f2;
+.profile-summary {
+  color: #546179;
+  line-height: 1.6;
 }
 
-.foto-lucas img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.accordion-btn {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 8px 10px;
 }
 
-.contenido-lucas {
-    padding: 34px;
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
 }
 
-.etiqueta-lucas {
-    margin: 0 0 8px;
-    color: #4f63c6;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+.skill-item {
+  padding: 9px 12px;
+  border: 1px solid #dbe3f1;
+  border-radius: 8px;
+  background: #f6f8fc;
+  color: #25314d;
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.contenido-lucas h3 {
-    margin: 0 0 12px;
-    color: #172033;
-    font-size: 30px;
-    line-height: 1.15;
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
 }
 
-.descripcion-lucas {
-    margin: 0 0 26px;
-    color: #546179;
-    font-size: 17px;
-    line-height: 1.7;
+.btn {
+  border: 0;
+  padding: 10px 14px;
+  background: #2563eb;
+  color: #ffffff;
 }
 
-.tecnologias-lucas {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+.btn.ghost {
+  border: 1px solid #dbe3f1;
+  background: transparent;
+  color: #172033;
 }
 
-.tecnologias-lucas h4 {
-    margin: 0 0 12px;
-    color: #172033;
-    font-size: 18px;
+.card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 32px;
+  transform: rotateY(180deg);
 }
 
-.lista-lucas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+.card-back h3 {
+  font-size: 26px;
 }
 
-.lista-lucas li {
-    padding: 9px 12px;
-    border: 1px solid #dbe3f1;
-    border-radius: 8px;
-    color: #25314d;
-    background: #f6f8fc;
-    font-size: 14px;
-    font-weight: 700;
+.contact-user {
+  color: #4b5563;
+  font-weight: 700;
+}
+
+.contact-message {
+  min-height: 130px;
+  resize: vertical;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.accordion-content.closed,
+.hidden-skill {
+  display: none !important;
 }
 
 @media (max-width: 760px) {
-    .curriculum-card-lucas {
-        grid-template-columns: 1fr;
-    }
+  .profile-front {
+    grid-template-columns: 1fr;
+  }
 
-    .foto-lucas {
-        min-height: 280px;
-    }
+  .profile-photo {
+    min-height: 260px;
+  }
 
-    .contenido-lucas {
-        padding: 24px;
-    }
-
-    .tecnologias-lucas {
-        grid-template-columns: 1fr;
-    }
+  .profile-info,
+  .card-back {
+    padding: 24px;
+  }
 }
 
 @keyframes floatAnimation {
