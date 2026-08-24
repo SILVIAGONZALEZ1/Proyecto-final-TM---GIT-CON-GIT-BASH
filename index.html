@@ -1,166 +1,230 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>proyecto de Git Bash</title>
-    <title>Proyecto de Git Bash</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto de Git Bash</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <header>
-      <h1>Bienvenidos al proyecto de Git Bash</h1>
-      <p>
-        En esta página mostramos una foto del equipo y compartimos las habilidades
-        de programación que conocemos, mientras practicamos ramas, commits y
-        colaboración en Git.
-      </p>
-      <p>Curso de Git y Git Bash</p>
-    </header>
-  <main style="display: flex; flex-direction: column; align-items: center;">
-      <h2>Integrantes</h2>
+  <header class="site-header">
+    <h1>Bienvenidos al proyecto de Git Bash</h1>
+    <p>
+      En esta página mostramos integrantes del equipo y compartimos habilidades
+      de programación mientras practicamos ramas, commits y colaboración en Git.
+    </p>
+    <p>Curso de Git y Git Bash</p>
+  </header>
 
-      <!-- tarjeta profesora -->
-      <section class="teacher-card">
-          <div class="photo">
+  <main>
+    <h2>Integrantes</h2>
+
+    <section class="skill-filters" aria-label="Filtrar habilidades">
+      <button class="filter-btn active" type="button" data-filter="all">Todas</button>
+      <button class="filter-btn" type="button" data-filter="educacion">Educación</button>
+      <button class="filter-btn" type="button" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" type="button" data-filter="backend">Backend</button>
+      <button class="filter-btn" type="button" data-filter="datos">Datos</button>
+      <button class="filter-btn" type="button" data-filter="herramientas">Herramientas</button>
+    </section>
+
+    <!--
+      Para agregar una tarjeta nueva:
+      1. Copiar una section profile-card completa.
+      2. Cambiar data-person, imagen, nombre, rol, descripción y usuario.
+      3. Cargar habilidades con class="skill-item" y data-category.
+      El JavaScript detecta contacto, filtros, accordion, scroll y CV automáticamente.
+    -->
+
+    <section class="profile-card reveal-card" data-person="Silvia González">
+      <div class="card-inner">
+        <article class="card-face card-front profile-front">
+          <div class="profile-photo">
             <img
               src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&auto=format&fit=crop"
-              alt="Foto de la profesora"
-            />
+              alt="Foto de Silvia González"
+            >
           </div>
-          <div class="info">
-            <h1 class="name">Silvia González</h1>
-            <p class="role">Profesora de Matemáticas</p>
-            <p class="summary">
-              Profesora con experiencia en educación secundaria, metodologías
-              activas y adaptación curricular. Me apasiona transmitir pensamiento
-              crítico y resolver problemas con el alumnado.
+
+          <div class="profile-info">
+            <p class="profile-label">Perfil educativo</p>
+            <h3>Silvia González</h3>
+            <p class="profile-role">Profesora de Matemáticas</p>
+            <p class="profile-summary">
+              Docente con experiencia en educación secundaria, metodologías activas
+              y acompañamiento de estudiantes en procesos de aprendizaje.
             </p>
-            <h2>Habilidades</h2>
-            <ul class="skills">
-              <li>Planificación curricular y evaluación formativa</li>
-              <li>Aprendizaje basado en proyectos (ABP)</li>
-              <li>Atención a la diversidad e inclusión</li>
-              <li>Integración de TIC en el aula</li>
+
+            <button class="accordion-btn" type="button" aria-expanded="true">Habilidades</button>
+            <ul class="skill-list accordion-content">
+              <li class="skill-item" data-category="educacion">Planificación curricular</li>
+              <li class="skill-item" data-category="educacion">Evaluación formativa</li>
+              <li class="skill-item" data-category="educacion">Inclusión en el aula</li>
+              <li class="skill-item" data-category="herramientas">TIC educativas</li>
             </ul>
 
             <div class="controls">
-              <a class="btn" href="#">Contactar</a>
-              <a class="btn ghost" href="#">Descargar CV</a>
+              <button class="btn contact-btn" type="button">Contactar</button>
+              <button class="btn ghost cv-btn" type="button">Descargar CV</button>
             </div>
           </div>
-      </section>
-    
-    
-      <!-- tarjeta jimena -->      
-      <section class="jg-card jg-card--horizontal">
-        <div class="jg-photo-container">
-          <img src="./img/jimena-foto.jpg" alt="Foto de Jimena García" class="jg-photo">
-        </div>
-        <div class="jg-content">
-          
-          <div class="jg-header-content">
-            <h2 class="jg-name">Jimena García</h2>
-            <p class="jg-profession">Data Analyst Jr.</p>
-          </div>
+        </article>
 
-          <div class="jg-section">
-            <h3 class="jg-section-title">Sobre mí</h3>
-            <p class="jg-about">
-              Estudiante avanzada en Ciencias Básicas con orientación en Biología y apasionada por el análisis de datos. Enfocada en la resolución de problemas mediante modelado estadístico, análisis exploratorio y machine learning.
-            </p>
+        <article class="card-face card-back">
+          <h3>Contactar a Silvia González</h3>
+          <p class="contact-user">Usuario: silvia.gonzalez</p>
+          <textarea class="contact-message" placeholder="Escribí tu mensaje"></textarea>
+          <div class="controls">
+            <button class="btn send-btn" type="button">Enviar</button>
+            <button class="btn ghost back-btn" type="button">Volver</button>
           </div>
-
-          <div class="jg-section">
-            <h3 class="jg-section-title">Habilidades</h3>
-           <ul class="jg-skills-list">
-              <li class="jg-skill-badge">Python</li>
-              <li class="jg-skill-badge">SQL</li>
-              <li class="jg-skill-badge">Git & Git Bash</li>
-              <li class="jg-skill-badge">Power BI</li>
-              <li class="jg-skill-badge">Modelado Estadístico</li>
-              <li class="jg-skill-badge">R</li>
-              <li class="jg-skill-badge">Metodologías Ágiles</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    
-    <!-- tarjeta heber -->
-    <section class="teacher-card heber-card" aria-labelledby="heber-name">
-      <div class="photo">
-        <img
-          src="./img/heber-avatar.svg"
-          alt="Rostro ilustrado de un hombre"
-        />
-      </div>
-      <div class="info">
-        <p class="heber-label">Perfil profesional</p>
-        <h1 id="heber-name" class="name">Heber José Vergara</h1>
-        <p class="role">Estudiante en formación · Desarrollo y soporte técnico</p>
-        <p class="summary">
-          Vengo del área de redes de datos, con algunos años de experiencia en soporte
-          técnico. Actualmente estoy profundizando mis conocimientos en sistemas, con
-          foco en el desarrollo.
-        </p>
-        <h2>Habilidades</h2>
-        <ul class="skills">
-          <li>Networking Mikrotik y Cisco</li>
-          <li>Ubiquiti</li>
-          <li>Linux</li>
-          <li>Virtualización</li>
-        </ul>
-        <div class="controls">
-          <a class="btn" href="#">Contactar</a>
-          <a class="btn ghost" href="#">Ver perfil</a>
-        </div>
+        </article>
       </div>
     </section>
-    
-      <!-- tarjeta lucas -->   
-      <section class="curriculum-card-lucas">
-        <div class="foto-lucas">
-          <img src="img/ChatGPT%20Image%2013%20ago%202026,%2012_46_49%20p.m..png"alt="Foto de perfil de Lucas">
-        </div>
-        <div class="contenido-lucas">
-          <p class="etiqueta-lucas">Perfil profesional</p>
-          <h3>Lucas David Adrover</h3>
-          <p class="descripcion-lucas">
-            Soy estudiante de programación de tercer año. Me gusta aprender sobre
-            tecnología y desarrollo de software. El área que más me interesa es el
-            backend, porque me permite trabajar con la lógica, los datos y el
-            funcionamiento interno de las aplicaciones.
-        </p>
-        <div class="tecnologias-lucas">
-            <div>
-                <h4>Lenguajes</h4>
-                <ul class="lista-lucas">
-                  <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>TypeScript</li>
-                    <li>Java</li>
-                  <li>SQL</li>
-                  </ul>
-            </div>
-            <div>
-                <h4>Herramientas</h4>
-                <ul class="lista-lucas">
-                  <li>Spring Boot</li>
-                  <li>React</li>
-                  <li>Git</li>
-                <li>Git Bash</li>
-                </ul>
+
+    <section class="profile-card reveal-card" data-person="Jimena García">
+      <div class="card-inner">
+        <article class="card-face card-front profile-front">
+          <div class="profile-photo">
+            <img src="./img/jimena-foto.jpg" alt="Foto de Jimena García">
+          </div>
+
+          <div class="profile-info">
+            <p class="profile-label">Perfil de datos</p>
+            <h3>Jimena García</h3>
+            <p class="profile-role">Data Analyst Jr.</p>
+            <p class="profile-summary">
+              Estudiante avanzada orientada al análisis de datos, modelado
+              estadístico y visualización de información para resolver problemas.
+            </p>
+
+            <button class="accordion-btn" type="button" aria-expanded="true">Habilidades</button>
+            <ul class="skill-list accordion-content">
+              <li class="skill-item" data-category="datos">Python</li>
+              <li class="skill-item" data-category="datos">SQL</li>
+              <li class="skill-item" data-category="datos">Power BI</li>
+              <li class="skill-item" data-category="datos">R</li>
+              <li class="skill-item" data-category="herramientas">Git & Git Bash</li>
+              <li class="skill-item" data-category="herramientas">Metodologías ágiles</li>
+            </ul>
+
+            <div class="controls">
+              <button class="btn contact-btn" type="button">Contactar</button>
+              <button class="btn ghost cv-btn" type="button">Descargar CV</button>
             </div>
           </div>
-        </div>
-      </section>
+        </article>
 
-    </main> 
-  
+        <article class="card-face card-back">
+          <h3>Contactar a Jimena García</h3>
+          <p class="contact-user">Usuario: jimena.garcia</p>
+          <textarea class="contact-message" placeholder="Escribí tu mensaje"></textarea>
+          <div class="controls">
+            <button class="btn send-btn" type="button">Enviar</button>
+            <button class="btn ghost back-btn" type="button">Volver</button>
+          </div>
+        </article>
+      </div>
+    </section>
 
+    <section class="profile-card reveal-card" data-person="Heber José Vergara">
+      <div class="card-inner">
+        <article class="card-face card-front profile-front">
+          <div class="profile-photo">
+            <img src="./img/heber-avatar.svg" alt="Avatar de Heber José Vergara">
+          </div>
 
+          <div class="profile-info">
+            <p class="profile-label">Perfil técnico</p>
+            <h3>Heber José Vergara</h3>
+            <p class="profile-role">Desarrollo y soporte técnico</p>
+            <p class="profile-summary">
+              Estudiante en formación con experiencia en redes de datos, soporte
+              técnico y administración básica de sistemas.
+            </p>
 
+            <button class="accordion-btn" type="button" aria-expanded="true">Habilidades</button>
+            <ul class="skill-list accordion-content">
+              <li class="skill-item" data-category="herramientas">Networking</li>
+              <li class="skill-item" data-category="herramientas">Mikrotik</li>
+              <li class="skill-item" data-category="herramientas">Cisco</li>
+              <li class="skill-item" data-category="herramientas">Linux</li>
+              <li class="skill-item" data-category="backend">Virtualización</li>
+            </ul>
 
+            <div class="controls">
+              <button class="btn contact-btn" type="button">Contactar</button>
+              <button class="btn ghost cv-btn" type="button">Descargar CV</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-face card-back">
+          <h3>Contactar a Heber José Vergara</h3>
+          <p class="contact-user">Usuario: heber.vergara</p>
+          <textarea class="contact-message" placeholder="Escribí tu mensaje"></textarea>
+          <div class="controls">
+            <button class="btn send-btn" type="button">Enviar</button>
+            <button class="btn ghost back-btn" type="button">Volver</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="profile-card reveal-card" data-person="Lucas David Adrover">
+      <div class="card-inner">
+        <article class="card-face card-front profile-front">
+          <div class="profile-photo">
+            <img
+              src="img/ChatGPT%20Image%2013%20ago%202026,%2012_46_49%20p.m..png"
+              alt="Foto de Lucas David Adrover"
+            >
+          </div>
+
+          <div class="profile-info">
+            <p class="profile-label">Perfil backend</p>
+            <h3>Lucas David Adrover</h3>
+            <p class="profile-role">Estudiante de programación</p>
+            <p class="profile-summary">
+              Estudiante de tercer año interesado en backend, lógica de negocio,
+              datos y funcionamiento interno de aplicaciones.
+            </p>
+
+            <button class="accordion-btn" type="button" aria-expanded="true">Habilidades</button>
+            <ul class="skill-list accordion-content">
+              <li class="skill-item" data-category="frontend">HTML</li>
+              <li class="skill-item" data-category="frontend">CSS</li>
+              <li class="skill-item" data-category="frontend">JavaScript</li>
+              <li class="skill-item" data-category="frontend">TypeScript</li>
+              <li class="skill-item" data-category="backend">Java</li>
+              <li class="skill-item" data-category="backend">Spring Boot</li>
+              <li class="skill-item" data-category="frontend">React</li>
+              <li class="skill-item" data-category="datos">SQL</li>
+              <li class="skill-item" data-category="herramientas">Git</li>
+              <li class="skill-item" data-category="herramientas">Git Bash</li>
+            </ul>
+
+            <div class="controls">
+              <button class="btn contact-btn" type="button">Contactar</button>
+              <button class="btn ghost cv-btn" type="button">Descargar CV</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card-face card-back">
+          <h3>Contactar a Lucas David Adrover</h3>
+          <p class="contact-user">Usuario: lucas.adrover</p>
+          <textarea class="contact-message" placeholder="Escribí tu mensaje"></textarea>
+          <div class="controls">
+            <button class="btn send-btn" type="button">Enviar</button>
+            <button class="btn ghost back-btn" type="button">Volver</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+  <script src="js/formulario.js"></script>
 </body>
 </html>
