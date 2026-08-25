@@ -11,14 +11,127 @@
     Arial;
 }
 body {
-  background: #f3f4f6;
+  background: #f3f4f6; #f3f4f6 #0388a6 #f14e32
   color: #111;
+}
+
+header {
+  background-color: #f7f5ee; 
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 12px 16px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.logo-conteiner {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  padding-left: 0;
+  gap: 12px;
+}
+
+.logo-conteiner img {
+  height: 32px; 
+  width: auto;
+  margin: 0;
+  display: block;
+}
+
+
+.logo-conteiner h1 {
+  font-size: 1.25rem;
+  margin: 0; 
+  padding: 0;
+  line-height: 1;
+  color: #000;
+}
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.menu a.active {
+  font-weight: bold;
 }
 
 main {
   gap: 0;
   padding: 0 16px 40px;
 }
+
+.hero-banner {
+  background: linear-gradient(135deg, #028090 0%, #00a896 100%); 
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  align-self: stretch;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.hero-banner h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 20px 0 15px 0;
+  line-height: 1.2;
+}
+
+.hero-banner p {
+  font-size: 1.15rem;
+  opacity: 0.95;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: #f1502f; /* Naranja característico de Git */
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-hero:hover {
+  background-color: #d03d1e;
+  transform: translateY(-2px);
+}
+
 
 .page {
   min-height: 100vh;
@@ -27,6 +140,8 @@ main {
   justify-content: center;
   padding: 32px;
 }
+
+
 .teacher-card {
   display: flex;
   gap: 28px;
@@ -373,4 +488,15 @@ main {
     .tecnologias-lucas {
         grid-template-columns: 1fr;
     }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px 10px;
+  gap: 20px;
+  background-color: #f0efe7;  
+
 }

@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyecto de Git Bash</title>
-    <title>Proyecto de Git Bash</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <header>
-      <h1>Bienvenidos al proyecto de Git Bash</h1>
-      <p>
-        En esta página mostramos una foto del equipo y compartimos las habilidades
-        de programación que conocemos, mientras practicamos ramas, commits y
-        colaboración en Git.
-      </p>
-      <p>Curso de Git y Git Bash</p>
-    </header>
+  <header>
+      <div class="header">
+        <div class="logo-conteiner">
+          <a href="https://github.com/SILVIAGONZALEZ1/Proyecto-final-TM---GIT-CON-GIT-BASH">
+            <img src="./img/git_logo.svg" alt="git logo">
+          </a>
+          <h1>Proyecto de Git Bash</h1>
+        </div>
+        <nav class="menu">
+          <a class="active" href="#home">Inicio</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#acerca">Acerca</a>
+        </nav>
+      </div>
+  </header>
+
   <main style="display: flex; flex-direction: column; align-items: center;">
-      <h2>Integrantes</h2>
+  <!--Banner del proyecto-->
+  <section  class="hero-banner">
+    <div class="hero-content">
+      <span class="badge">PROYECTO FINAL</span>
+        <h1>Construyendo en equipo con Git Bash</h1>
+        <p>
+          En esta página mostramos una foto del equipo y compartimos las habilidades
+          de programación que conocemos, mientras practicamos ramas, commits y colaboración en Git.
+        </p>
+        <a href="#equipo" class="btn-hero">Ver desarrolladores ↓</a>
+      </div>        
+  </section>
 
       <!-- tarjeta profesora -->
       <section class="teacher-card">
@@ -49,8 +66,7 @@
               <a class="btn ghost" href="#">Descargar CV</a>
             </div>
           </div>
-      </section>
-    
+      </section>    
     
       <!-- tarjeta jimena -->      
       <section class="jg-card jg-card--horizontal">
@@ -164,10 +180,14 @@
       </section>
 
     </main> 
-  
 
-
-
-
+    <footer>
+      <div class="footer">
+        <a href="#default" class="logo">
+          <img src="./img/github_logo.svg" alt="github" height="50px" width="50px">
+        </a>
+        <p>Desarrollado por <i>Equipo GIT BASH</i></p>
+      
+    </footer>
 </body>
 </html>
