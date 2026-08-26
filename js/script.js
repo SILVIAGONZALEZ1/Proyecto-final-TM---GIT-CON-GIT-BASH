@@ -66,3 +66,12 @@ cvButtons.forEach((button) => {
     alert(`Descarga simulada del CV de ${person}.`);
   });
 });
+
+/*menu hamburguesa*/
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const menu = document.querySelector('.menu');
+
+hamburgerBtn.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
+
