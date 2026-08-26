@@ -492,6 +492,11 @@ footer {
 
 /* Reglas para pantallas menores a 700px */
 @media (max-width: 700px) {
+  
+  .header {
+    position: relative;
+  }
+  
   .hamburger-btn {
     display: flex; /* Muestra el botón */
   }
@@ -505,6 +510,7 @@ footer {
     flex-direction: column;
     background-color: #f7f5ee;
     padding: 20px 0;
+    z-index: 9999;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
