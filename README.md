@@ -6,16 +6,16 @@
 
 Trabajo grupal para el Taller de Git con Git Bash, de Casa del Futuro. Es una página que arma una tarjeta de presentación por cada integrante del equipo, con foto (o video), rol y las habilidades de cada uno. La idea del trabajo es practicar el flujo de Git en equipo: ramas, commits, y cómo coordinarse sin pisarse el trabajo entre todos.
 
-## Vista del proyecto
+## 👓​​ Vista del proyecto
 
 ![Vista de escritorio](img/demo_proyecto.gif)
 
 
-## Tecnologías
+## 🛠️​ Tecnologías
 
 **HTML**, **CSS** y **JavaScript**, sin nada más. No hay backend ni instalación de por medio, es una página estática. Cada uno diseñó su propia tarjeta, tratando de respetar buenas prácticas de accesibilidad y semántica en el HTML. **Git** y **GitHub** para el control de versiones y el trabajo colaborativo.
 
-## Estructura
+## 🌳​ Estructura
 
 ```text
 .
@@ -51,7 +51,7 @@ Trabajo grupal para el Taller de Git con Git Bash, de Casa del Futuro. Es una p�
 - **Navegación fluida:** Barra superior fija con desplazamiento suave (smooth scroll) entre secciones.
 
  
-## Cómo verla
+## ❗​ Cómo verla
 
 No hace falta instalar nada. Cloná el repo:
 ```bash
@@ -60,7 +60,7 @@ git clone https://github.com/SILVIAGONZALEZ1/Proyecto-final-TM---GIT-CON-GIT-BAS
 
 y abrís `index.html` directo en el navegador. Si querés que recargue solo cada vez que guardás un cambio, podés usar la extensión Live Server de VS Code.
 
-## Quiénes somos
+## 🖐️​ Quiénes somos
 
 - Silvia González - profesora, coordina el proyecto
 - Jimena García - Data Analyst Jr.
@@ -80,7 +80,7 @@ Para nombrar las ramas veníamos usando algo así:
 - fix/algo -> para arreglar un bug
 - docs/algo -> cambios de documentación
 
-## Si vas a sumar algo
+## ⚠️​ Si vas a sumar algo
 
 1. Creá tu rama desde main (nunca trabajes directo sobre main).
 2. Commiteá con mensajes que se entiendan (ej: "corrige accesibilidad tarjeta heber").
