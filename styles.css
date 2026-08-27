@@ -210,6 +210,17 @@ main > h2 {
   color: #ffffff;
 }
 
+.filter-btn {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #1e40af;
+  color: #ffffff;
+  transform: translateY(-2px); 
+}
+
+
 .profile-card {
   width: 100%;
   max-width: 900px;
@@ -339,6 +350,16 @@ main > h2 {
   border: 1px solid #dbe3f1;
   background: transparent;
   color: #172033;
+}
+
+.btn {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #1e40af; 
+  color: #ffffff;
+  transform: translateY(-2px); 
 }
 
 .card-back {
@@ -489,8 +510,6 @@ footer {
   color: #333333;
 }
 
-
-/* Reglas para pantallas menores a 700px */
 @media (max-width: 700px) {
   
   .header {
@@ -498,13 +517,13 @@ footer {
   }
   
   .hamburger-btn {
-    display: flex; /* Muestra el botón */
+    display: flex; 
   }
 
   .menu {
-    display: none; /* Oculta el menú horizontal */
+    display: none; 
     position: absolute;
-    top: 100%; /* Se despliega justo debajo del header */
+    top: 100%; 
     left: 0;
     width: 100%;
     flex-direction: column;
