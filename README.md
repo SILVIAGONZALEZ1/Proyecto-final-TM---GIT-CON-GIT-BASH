@@ -8,7 +8,7 @@ Trabajo grupal para el Taller de Git con Git Bash, de Casa del Futuro. Es una p√
 
 ## Vista del proyecto
 
-![Vista de escritorio](img/preview-desktop.png)
+![Vista de escritorio](img/demo_proyecto.gif)
 
 
 ## Tecnolog√≠as
